@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kailashTrips Flyers</title>
+  <style>
+    body {font-family: Arial, sans-serif; padding: 20px;}
+    h1 {text-align:center;}
+    .menu-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+    .menu-card {
+      border:1px solid #ddd;
+      border-radius:10px;
+      background:#f9f9f9;
+      overflow:hidden;
+      cursor:pointer;
+      text-align:center;
+    }
+    .menu-card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+    /* Lightbox */
+    .lightbox {
+      display:none;
+      position:fixed;
+      z-index:1000;
+      left:0; top:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.9);
+      justify-content:center;
+      align-items:center;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    }
+    .lightbox .close {
+      position:absolute;
+      top:20px; right:30px;
+      font-size:40px;
+      color:white;
+      cursor:pointer;
+    }
+  </style>
+</head>
+ <h1>Kailash Trips Flyers</h1>
+  
+  <div class="menu-grid">
+    <div class="menu-card"><img src="kailash1.jpg" alt="kailashTrip 1"></div>
+    <div class="menu-card"><img src="kailash2.jpg" alt="kailashTrip 2"></div>
+    <div class="menu-card"><img src="kailash3.jpg" alt="kailashTrip 3"></div>
+    <div class="menu-card"><img src="kailash4.png" alt="kailashTrip 4"></div>
+    <div class="menu-card"><img src="kailash5.png" alt="kailashTrip 5"></div>
+    <div class="menu-card"><img src="kailash6.png" alt="kailashTrip 6"></div>
+    <div class="menu-card"><img src="kailash7.png" alt="kailashTrip 7"></div>
+    <div class="menu-card"><img src="kailash8.png" alt="kailashTrip 8"></div>
+    <div class="menu-card"><img src="kailash9.png" alt="kailashTrip 9"></div>
+    <div class="menu-card"><img src="kailash10.png" alt="kailashTrip 10"></div>
+    <div class="menu-card"><img src="kailash11.png" alt="kailashTrip 11"></div>
+    <div class="menu-card"><img src="kailash12.png" alt="kailashTrip 12"></div>
+    <div class="menu-card"><img src="kailash13.png" alt="kailashTrip 13"></div>
+    <div class="menu-card"><img src="kailash14.png" alt="kailashTrip 14"></div>
+    <div class="menu-card"><img src="kailash15.png" alt="kailashTrip 15"></div>
+    <div class="menu-card"><img src="kailash16.png" alt="kailashTrip 16"></div>
+
+
+
+
+  </div>
+
+<p style="text-align:center;margin-top:20px;">
+    <a href="../index.html#categories">⬅ Back to Categories</a>
+  </p>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.menu-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
