@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CustomiseTrips Flyers</title>
+  <style>
+    body {font-family: Arial, sans-serif; padding: 20px;}
+    h1 {text-align:center;}
+    .menu-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+    .menu-card {
+      border:1px solid #ddd;
+      border-radius:10px;
+      background:#f9f9f9;
+      overflow:hidden;
+      cursor:pointer;
+      text-align:center;
+    }
+    .menu-card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+    /* Lightbox */
+    .lightbox {
+      display:none;
+      position:fixed;
+      z-index:1000;
+      left:0; top:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.9);
+      justify-content:center;
+      align-items:center;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    }
+    .lightbox .close {
+      position:absolute;
+      top:20px; right:30px;
+      font-size:40px;
+      color:white;
+      cursor:pointer;
+    }
+  </style>
+</head>
+ <h1>Customise Trips Flyers</h1>
+  
+  <div class="menu-grid">
+    <div class="menu-card"><img src="customise1.jpg" alt="CustomiseTrip 1"></div>
+    <div class="menu-card"><img src="customise2.jpg" alt="CustomiseTrip 2"></div>
+    <div class="menu-card"><img src="customise3.jpg" alt="CustomiseTrip 3"></div>
+    <div class="menu-card"><img src="customise4.jpg" alt="CustomiseTrip 4"></div>
+    <div class="menu-card"><img src="customise5.jpg" alt="CustomiseTrip 5"></div>
+    <div class="menu-card"><img src="customise6.jpg" alt="CustomiseTrip 6"></div>
+    <div class="menu-card"><img src="customise7.jpg" alt="CustomiseTrip 7"></div>
+    <div class="menu-card"><img src="customise8.jpg" alt="CustomiseTrip 8"></div>
+    <div class="menu-card"><img src="customise9.jpg" alt="CustomiseTrip 9"></div>
+    <div class="menu-card"><img src="customise10.PNG" alt="CustomiseTrip 10"></div>
+<div class="menu-card"><img src="customise11.PNG" alt="CustomiseTrip 11"></div>
+<div class="menu-card"><img src="customise12.PNG" alt="CustomiseTrip 12"></div>
+<div class="menu-card"><img src="customise13.PNG" alt="CustomiseTrip 13"></div>
+<div class="menu-card"><img src="customise14.PNG" alt="CustomiseTrip 14"></div>
+<div class="menu-card"><img src="customise15.PNG" alt="CustomiseTrip 15"></div>
+<div class="menu-card"><img src="Customise16.PNG" alt="CustomiseTrip 16"></div>
+<div class="menu-card"><img src="Customise17.PNG" alt="CustomiseTrip 17"></div>
+<div class="menu-card"><img src="Customise18.PNG" alt="CustomiseTrip 18"></div>
+<div class="menu-card"><img src="Customise19.PNG" alt="CustomiseTrip 19"></div>
+<div class="menu-card"><img src="Customise20.PNG" alt="CustomiseTrip 20"></div>
+<div class="menu-card"><img src="Customise21.PNG" alt="CustomiseTrip 21"></div>
+<div class="menu-card"><img src="Customise22.PNG" alt="CustomiseTrip 22"></div>
+<div class="menu-card"><img src="Customise23.PNG" alt="CustomiseTrip 23"></div>
+<div class="menu-card"><img src="Customise24.PNG" alt="CustomiseTrip 24"></div>
+<div class="menu-card"><img src="Customise25.PNG" alt="CustomiseTrip 25"></div>
+<div class="menu-card"><img src="Customise26.PNG" alt="CustomiseTrip 26"></div>
+<div class="menu-card"><img src="Customise27.PNG" alt="CustomiseTrip 27"></div>
+<div class="menu-card"><img src="Customise28.PNG" alt="CustomiseTrip 28"></div>
+<div class="menu-card"><img src="Customise29.PNG" alt="CustomiseTrip 29"></div>
+<div class="menu-card"><img src="Customise30.PNG" alt="CustomiseTrip 30"></div>
+<div class="menu-card"><img src="Customise31.PNG" alt="CustomiseTrip 31"></div>
+<div class="menu-card"><img src="Customise32.PNG" alt="CustomiseTrip 32"></div>
+<div class="menu-card"><img src="Customise33.PNG" alt="CustomiseTrip 33"></div>
+<div class="menu-card"><img src="Customise34.PNG" alt="CustomiseTrip 34"></div>
+<div class="menu-card"><img src="Customise35.PNG" alt="CustomiseTrip 35"></div>
+<div class="menu-card"><img src="Customise36.PNG" alt="CustomiseTrip 36"></div>
+
+  </div>
+
+<p style="text-align:center;margin-top:20px;">
+    <a href="../index.html#categories">⬅ Back to Categories</a>
+  </p>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.menu-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
