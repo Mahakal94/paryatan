@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahakal Paryatan - Tours & Travels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('flyers/bg.jpg') center/cover no-repeat fixed;
+  color: #333;
+position: relative;
+}
+
+section {
+  background: rgba(255,255,255,0.8); /* white with transparency */
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+    header {background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://source.unsplash.com/1600x700/?travel,india') center/cover no-repeat;color:white;text-align:center;padding:100px 20px;}
+    header h1 {font-family:'Playfair Display',serif;font-size:3rem;margin:0;}
+    header p {font-size:1.2rem;margin-top:10px;}
+    nav {background:#111;padding:15px;text-align:center;}
+    nav a {color:white;margin:0 15px;text-decoration:none;font-weight:500;}
+    section {padding:60px 20px;max-width:1200px;margin:auto;}
+    section h2 {font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:20px;text-align:center;}
+    .categories,.packages {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .card {background:white;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);padding:20px;text-align:center;transition:transform 0.3s;text-decoration:none;color:inherit;}
+    .card:hover {transform:translateY(-5px);}
+    .card h3 {font-size:1.3rem;margin-bottom:10px;}
+    .card img {
+     width: 100%;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 10px;
+     margin-bottom: 10px;
+     }
+
+    form {background:white;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1);max-width:600px;margin:auto;}
+    form input,form textarea,form select,form button {width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ccc;font-size:1rem;}
+    form button {background:#111;color:white;border:none;cursor:pointer;transition:0.3s;}
+    form button:hover {background:#444;}
+    .contact {text-align:center;}
+    .contact a {display:inline-block;margin:10px;padding:12px 20px;border-radius:50px;text-decoration:none;background:#111;color:white;transition:0.3s;}
+    .contact a:hover {background:#444;}
+    footer {background:#111;color:white;text-align:center;padding:20px;margin-top:40px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mahakal Paryatan</h1>
+    <p>Luxury Tours & Travel Packages – Explore the World with Us</p>
+  </header>
+
+  <nav>
+    <a href="#categories">Categories</a>
+    <a href="#packages">Packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="categories">
+  <h2>Our Travel Categories</h2>
+  <div class="categories">
+    <a href="flyers/oneday.html" class="card">
+      <img src="covers/oneday.jpg" alt="One Day Trips">
+      <h3>One Day Trips</h3>
+    </a>
+    <a href="flyers/solo.html" class="card">
+      <img src="covers/solotrip.jpg" alt="Solo Trips">
+      <h3>Solo Trips</h3>
+    </a>
+    <a href="flyers/trekking.html" class="card">
+      <img src="covers/trekking.jpg" alt="Trekking Adventures">
+      <h3>Trekking Adventures</h3>
+    </a>
+    <a href="flyers/honeymoon.html" class="card">
+      <img src="covers/honeymoon.jpg" alt="Honeymoon Packages">
+      <h3>Honeymoon Packages</h3>
+    </a>
+    <a href="flyers/gettogether.html" class="card">
+      <img src="covers/gettogether.jpg" alt="Get-Together Trips">
+      <h3>Get-Together Trips</h3>
+    </a>
+    <a href="flyers/wedding.html" class="card">
+      <img src="covers/wedding.jpg" alt="Destination Weddings">
+      <h3>Destination Weddings</h3>
+    </a>
+    <a href="flyers/homestay.html" class="card">
+      <img src="covers/homestay.jpg" alt="Homestays">
+      <h3>Homestays</h3>
+    </a>
+    <a href="flyers/adventure.html" class="card">
+      <img src="covers/adventure.jpg" alt="Adventure Sports">
+      <h3>Adventure Sports</h3>
+    </a>
+    <a href="flyers/wildlife.html" class="card">
+      <img src="covers/wildlife.jpg" alt="Wildlife Tours">
+      <h3>Wildlife Tours</h3>
+    </a>
+    <a href="flyers/luxury.html" class="card">
+      <img src="covers/luxury.jpg" alt="Luxury Retreats">
+      <h3>Luxury Retreats</h3>
+    </a>
+   <a href="flyers/customise.html" class="card">
+      <img src="covers/customise.jpg" alt="Customise">
+      <h3>Customise</h3>
+    </a>
+ <a href="flyers/kailash+Jyotirling.html" class="card">
+      <img src="covers/kailash.jpg" alt="kailash-mansarovar">
+      <h3>kailash+Jyotirling</h3>
+    </a>
+
+  </div>
+</section>
+
+<section id="packages">
+  <h2>Special Packages</h2>
+  <div class="packages">
+    <a href="flyers/kerala.html" class="card">
+      <img src="covers/kerala.jpg" alt="Kerala Tours">
+      <h3>Kerala Tours</h3>
+    </a>
+    <a href="flyers/kashmir.html" class="card">
+      <img src="covers/kashmir.avif" alt="Kashmir Tours">
+      <h3>Kashmir Tours</h3>
+    </a>
+    <a href="flyers/chardham.html" class="card">
+      <img src="covers/chardham.jpg" alt="Char Dham Yatra">
+      <h3>Char Dham Yatra</h3>
+    </a>
+    <a href="flyers/uttarakhand.html" class="card">
+      <img src="covers/uttarakhand.jpg" alt="Uttarakhand Special">
+      <h3>Uttarakhand Special</h3>
+ <a href="flyers/gujarat.html" class="card">
+      <img src="covers/gujarat.jpg" alt="Gujarat">
+      <h3>Gujarat Special</h3>
+ <a href="flyers/south.html" class="card">
+      <img src="covers/south.jpg" alt="South">
+      <h3>South Special</h3>
+ <a href="flyers/rajasthan.html" class="card">
+      <img src="covers/rajasthan.jpg" alt="Rajasthan">
+      <h3>Rajasthan Special</h3>
+ <a href="flyers/odisha.html" class="card">
+      <img src="covers/odisha.jpg" alt="Odisha">
+      <h3>Odisha Special</h3>
+
+
+    </a>
+  </div>
+</section>
+
+
+  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone" required>
+      <select id="package" required>
+        <option>Select Package</option>
+        <option>Kerala Tour</option>
+        <option>Kashmir Tour</option>
+        <option>Char Dham Yatra</option>
+        <option>Uttarakhand Special</option>
+        <option>Honeymoon</option>
+        <option>Solo Trip</option>
+        <option>Trekking</option>
+        <option>Destination Wedding</option>
+        <option>Customise</option>
+        <option>Kailash+Jyotirling</option>
+
+      </select>
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button type="button" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+      <button type="button" onclick="sendToGmail()">Send via Gmail</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Owner:</strong> Rajvi Soni</p>    
+ <div class="contact">
+  <a href="https://wa.me/7624041079" target="_blank">WhatsApp</a>
+  <a href="https://www.instagram.com/mahakal.paryatan1994?igsh=MXNxdGx0czh4a2l0Zg==" target="_blank">Instagram</a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mahakal.paryatan.1994@gmail.com" target="_blank">Gmail</a>
+</div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mahakal Paryatan | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function getFormData() {
+      return {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        package: document.getElementById("package").value,
+        message: document.getElementById("message").value
+      };
+    }
+    function sendToWhatsApp() {
+      let d = getFormData();
+      let msg = `Hello, I want to book a trip.%0A\n\nName:${d.name}%0AEmail:${d.email}%0APhone:${d.phone}%0APackage:${d.package}%0AMessage:${d.message}`;
+      window.open(`https://wa.me/7624041079?text=${msg}`, '_blank');
+    }
+    function sendToGmail() {
+      let d = getFormData();
+      let sub = `Booking Request: ${d.package}`;
+      let body = `Name:${d.name}%0AEmail:${d.email}%0APhone:${d.phone}%0AMessage:${d.message}`;
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=mahakal.paryatan.1994@gmail.com&su=${sub}&body=${body}`, '_blank');
+    }
+  </script>
+</body>
+</html>
