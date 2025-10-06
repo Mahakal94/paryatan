@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeralaTrips Flyers</title>
+  <style>
+    body {font-family: Arial, sans-serif; padding: 20px;}
+    h1 {text-align:center;}
+    .menu-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:20px;
+    }
+    .menu-card {
+      border:1px solid #ddd;
+      border-radius:10px;
+      background:#f9f9f9;
+      overflow:hidden;
+      cursor:pointer;
+      text-align:center;
+    }
+    .menu-card img {
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      display:block;
+    }
+    /* Lightbox */
+    .lightbox {
+      display:none;
+      position:fixed;
+      z-index:1000;
+      left:0; top:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.9);
+      justify-content:center;
+      align-items:center;
+    }
+    .lightbox img {
+      max-width:90%;
+      max-height:90%;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    }
+    .lightbox .close {
+      position:absolute;
+      top:20px; right:30px;
+      font-size:40px;
+      color:white;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kerala Trips Flyers</h1>
+  
+  <div class="menu-grid">
+    <div class="menu-card"><img src="kerala1.jpg" alt="KeralaTrip 1"></div>
+    <div class="menu-card"><img src="kerala2.jpg" alt="KeralaTrip 2"></div>
+    <div class="menu-card"><img src="kerala3.jpg" alt="KeralaTrip 3"></div>
+    <div class="menu-card"><img src="kerala4.jpg" alt="KeralaTrip 4"></div>
+    <div class="menu-card"><img src="kerala5.jpg" alt="KeralaTrip 5"></div>
+    <div class="menu-card"><img src="kerala6.jpg" alt="KeralaTrip 6"></div>
+    <div class="menu-card"><img src="kerala7.jpg" alt="KeralaTrip 7"></div>
+    <div class="menu-card"><img src="kerala8.jpg" alt="KeralaTrip 8"></div>
+    <div class="menu-card"><img src="kerala9.jpg" alt="KeralaTrip 9"></div>
+    <div class="menu-card"><img src="kerala10.jpg" alt="KeralaTrip 10"></div>
+  </div>
+
+  <p style="text-align:center;margin-top:20px;">
+    <a href="../index.html#categories">⬅ Back to Categories</a>
+  </p>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.menu-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
